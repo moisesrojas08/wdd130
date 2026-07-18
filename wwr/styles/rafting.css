@@ -1,4 +1,4 @@
-/* Variables de colores y fuentes */
+/* Variables en :root requeridas */
 :root {
     --primary-color: #005f73;
     --accent1-color: #0a9396;
@@ -6,17 +6,20 @@
     --body-font: 'Helvetica', sans-serif;
 }
 
+/* Restablecimiento universal obligatorio */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos de fuente y color del cuerpo */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
 
+/* Centrado de bloques principales */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
@@ -32,13 +35,14 @@ nav, p, section, article {
     padding: 8px;
 }
 
+/* Quitar subrayados en redes sociales */
 .socialmedia a {
     text-decoration: none;
 }
 
-
+/* --- Posicionamiento del Hero --- */
 .hero {
-    position: relative;
+    position: relative; /* Requerido para posicionar los hijos */
 }
 
 .hero img {
@@ -47,7 +51,7 @@ nav, p, section, article {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -67,6 +71,7 @@ h1 {
     padding: 10px;
 }
 
+/* Imagen flotada a la derecha dentro del artículo */
 .hero article img {
     float: right;
     width: 125px;
